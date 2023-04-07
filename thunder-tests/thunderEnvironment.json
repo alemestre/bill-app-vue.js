@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "d2efe878-4a39-43cb-a61f-30e510dfb7ae",
+    "name": "bill-backend-api-env",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-04-06T12:13:36.480Z",
+    "modified": "2023-04-06T12:13:36.480Z",
+    "data": [
+      {
+        "name": "url",
+        "value": "http://127.0.0.1:3000"
+      },
+      {
+        "name": "bill_id",
+        "value": "642fed6aa93e7f868c643466"
+      },
+      {
+        "name": "client_id",
+        "value": "6430364134c47d0ef0e16453"
+      }
+    ]
+  },
+  {
+    "_id": "f047ca37-db08-4480-b90a-124a5feb29db",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -2,
+    "created": "2023-04-06T12:15:58.380Z",
+    "modified": "2023-04-06T12:15:58.380Z",
+    "data": []
+  }
+]

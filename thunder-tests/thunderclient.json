@@ -1,0 +1,234 @@
+[
+  {
+    "_id": "d50c4ab1-eb40-4b7e-bc37-182369e702eb",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "bills",
+    "url": "{{url}}/bills",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-04-06T12:13:00.184Z",
+    "modified": "2023-04-07T14:44:29.094Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "95a2b01d-d3ec-4f09-a765-37ccadc0da03",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "bills/:id",
+    "url": "{{url}}/bills/{id}",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-04-06T12:15:00.650Z",
+    "modified": "2023-04-06T13:56:23.245Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{bill_id}}",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "182ae47c-1e15-468e-9764-331ed5a3220f",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "bills",
+    "url": "{{url}}/bills",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-04-06T12:16:46.038Z",
+    "modified": "2023-04-07T10:16:11.107Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"billnum\": 1,\n  \"date\": \"02/03/2023\",\n  \"description\": \"Facture de test\",\n  \"client\": {\n    \"idclient\": 1,\n    \"firstName\": \"Alice\",\n    \"lastName\": \"Doe\"\n  },\n  \"prestations\": [{\n    \"description\": \"Test description\",\n    \"qty\": 2,\n    \"price\": 450\n  },\n  {\n    \"description\": \"TOTO\",\n    \"qty\": 2,\n    \"price\": 950\n  }],\n  \"discount\": 0,\n  \"paid\": 0,\n  \"totalHT\": 2800,\n  \"tva\": 20,\n  \"totalTTC\": 3360\n}\n",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json._id",
+        "action": "setto",
+        "value": "{{bill_id}}"
+      }
+    ]
+  },
+  {
+    "_id": "b4ddfdc0-76d5-44ae-a4ea-52fa3216607d",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "bills/:id",
+    "url": "{{url}}/bills/{id}",
+    "method": "PATCH",
+    "sortNum": 25000,
+    "created": "2023-04-06T12:17:36.026Z",
+    "modified": "2023-04-06T13:56:33.546Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{bill_id}}",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"billnum\": 1,\n  \"date\": \"02/03/2023\",\n  \"client\": {\n    \"idclient\": 1,\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\"\n  },\n  \"prestations\": [\n    {\n      \"description\": \"Test description updatée\",\n      \"qty\": 2,\n      \"price\": 450\n    },\n    {\n      \"description\": \"TOTO\",\n      \"qty\": 2,\n      \"price\": 950\n    }\n  ],\n  \"discount\": 0,\n  \"paid\": 0,\n  \"totalHT\": 2800,\n  \"tva\": 20,\n  \"totalTTC\": 3360,\n  \"__v\": 0\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "9cd04c88-8aff-4b06-aa41-80bb3381bd0f",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "bills/:id",
+    "url": "{{url}}/bills/7",
+    "method": "DELETE",
+    "sortNum": 40000,
+    "created": "2023-04-06T12:18:05.322Z",
+    "modified": "2023-04-06T13:06:35.643Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "28ca9b3d-c07d-4567-a276-c1deaf2b56fe",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "clients",
+    "url": "{{url}}/clients",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-04-06T12:41:43.464Z",
+    "modified": "2023-04-06T12:42:54.182Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6b266754-40c7-499d-8c5a-e29967819ce2",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "clients/:id",
+    "url": "{{url}}/clients/{id}",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-04-06T12:42:09.692Z",
+    "modified": "2023-04-07T14:34:56.450Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{client_id}}",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "2845525e-034b-48ab-9c92-b8bb02cd598e",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "clients/:id",
+    "url": "{{url}}/clients/{id}",
+    "method": "PATCH",
+    "sortNum": 70000,
+    "created": "2023-04-06T12:43:18.939Z",
+    "modified": "2023-04-07T14:36:07.825Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{client_id}}",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"_id\": \"643029416d10efb27e5aa19e\",\n  \"firstName\": \"James\",\n  \"lastName\": \"Doe\",\n  \"jobTitle\": \"Directeur\",\n  \"companyName\": \"Orange\",\n  \"phone\": \"03 87 45 20 13\",\n  \"email\": \"john.doe@orange.fr\",\n  \"address\": \"2 rue de la poupée qui dort\",\n  \"postalCode\": \"57000\",\n  \"city\": \"Metz\",\n  \"country\": \"France\",\n  \"createdDate\": \"07/04/2023\",\n  \"__v\": 0\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "723e6700-d391-43d0-9e02-f659505973bf",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "clients",
+    "url": "{{url}}/clients",
+    "method": "POST",
+    "sortNum": 80000,
+    "created": "2023-04-06T12:43:59.995Z",
+    "modified": "2023-04-07T15:26:57.172Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"firstName\": \"Marcus\",\n  \"lastName\": \"Doe\",\n  \"jobTitle\": \"Data ingenior\",\n  \"companyName\": \"Orange\",\n  \"phone\": \"03 87 45 20 13\",\n  \"email\": \"john.doe@orange.fr\",\n  \"address\": \"2 rue de la poupée qui dort\",\n  \"postalCode\": \"57000\",\n  \"city\": \"Metz\",\n  \"country\": \"France\",\n  \"createdDate\": \"07/04/2023\"\n  \n}\n",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json._id",
+        "action": "setto",
+        "value": "{{client_id}}"
+      }
+    ]
+  },
+  {
+    "_id": "f51b2388-1306-4019-8a2a-b09c8bad8c3f",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "clients/:id",
+    "url": "{{url}}/clients/{id}",
+    "method": "DELETE",
+    "sortNum": 90000,
+    "created": "2023-04-06T12:44:22.005Z",
+    "modified": "2023-04-07T14:36:31.364Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "{{client_id}}",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "8fc62227-176a-45f8-b8df-cab58aba2e5e",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "bills-limit-5",
+    "url": "{{url}}/bills/limit",
+    "method": "GET",
+    "sortNum": 15000,
+    "created": "2023-04-07T14:43:51.016Z",
+    "modified": "2023-04-07T14:44:36.355Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "fdd729d2-81e0-4a2e-9c41-a0a439c44f6c",
+    "colId": "edfd315c-d9b4-4760-972a-4823ec85f647",
+    "containerId": "",
+    "name": "clients-last-5-added",
+    "url": "{{url}}/clients/limit",
+    "method": "GET",
+    "sortNum": 55000,
+    "created": "2023-04-07T15:25:16.440Z",
+    "modified": "2023-04-07T15:25:46.929Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

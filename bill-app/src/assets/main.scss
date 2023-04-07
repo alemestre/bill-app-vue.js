@@ -1,0 +1,13 @@
+// Import de Bootstrap's Css
+// `yarn add sass -D`
+//  `yarn add bootstrap`
+
+@import 'bootstrap/scss/bootstrap';
+
+
+// Import Fontawesome
+// `yarn add @fortawesome/fontawesome-free
+
+$primary: steal;
+
+@import '@fortawesome/fontawesome-free/css/all.min.css';
